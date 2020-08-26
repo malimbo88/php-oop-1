@@ -3,6 +3,8 @@ USERS table:
 Name: VARCHAR(25),
 Surname: VARCHAR(50),
 Year of birth: TINYINT,
+Month of birth: TINYINT,
+Day of birth: TINYINT,
 Nationality: VARCHAR(50),
 Username: VARCHAR(50),
 Email: VARCHAR(100),
