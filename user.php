@@ -49,6 +49,23 @@ Class User {
     return $this->birth_date;
   }
 
+  //Method getUserData
+  //Return an array with all the user data
+  public function getUserData() {
+    return [
+      "name" => $this->name,
+      "surname" => $this->surname,
+      "nationality" => $this->nationality,
+      "year" => $this->year,
+      "month" => $this->month,
+      "day" => $this->day,
+      "username" => $this->username,
+      "email" => $this->email,
+      "password" => $this->password,
+      "authorized" => $this->authorized,
+    ];
+  }
+
 };
 
  ?>
