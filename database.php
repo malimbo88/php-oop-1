@@ -13,7 +13,8 @@ $array_users = [
     "day" => "1",
     "username" => "Pippo1",
     "email" => "Pippo@gmail.com",
-    "password" => "Pippo89"
+    "password" => "Pippo89",
+    "authorized" => true
   ],
   [
     "name" => "Pluto",
@@ -24,7 +25,8 @@ $array_users = [
     "day" => "8",
     "username" => "Pluto1",
     "email" => "Pluto@gmail.com",
-    "password" => "Pluto95"
+    "password" => "Pluto95",
+    "authorized" => false
   ],
 ];
 

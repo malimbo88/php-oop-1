@@ -8,12 +8,24 @@ Class User {
   public $username;
   public $email;
   public $password;
+  public $authorized;
 
   //Methods
 
-  public function __construct($_name, $_surname) {
+  //Method cunstruct
+  public function __construct($_name, $_surname, $_authorized = false) {
     $this->name = $_name;
     $this->surname = $_surname;
+    $this->authorized = $_authorized;
+  }
+
+  //Method getAuthorized
+  public function getAuthorized($_authorized) {
+    if ($_authorized === false) {
+      $this->$authorized = "denied";
+    }else {
+      $this->$authorized = "allowed";
+    }
   }
 
   //Method birthDate
