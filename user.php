@@ -6,9 +6,12 @@ Class User {
   public $surname;
   public $nationality;
   public $username;
+  public $year;
+  public $month;
+  public $day;
   public $email;
   public $password;
-  public $authorized;
+  private $authorized;
 
   //Methods
 
@@ -19,19 +22,28 @@ Class User {
     $this->authorized = $_authorized;
   }
 
+  public function setAuthorized($_authorized) {
+    if (is_bool($_authorized)) {
+      $this->authorized = $_authorized;
+    }
+  }
+
   //Method getAuthorized
-  public function getAuthorized($_authorized) {
-    if ($_authorized === false) {
-      $this->$authorized = "denied";
+  public function getAuthorized() {
+    if ($this->authorized === false) {
+      return "denied";
     }else {
-      $this->$authorized = "allowed";
+      return "allowed";
     }
   }
 
   //Method birthDate
   //Arguments year of birth, month of birth, day of birth
   //Return a string that rapresent the date of birth
-  public function birthDate($year, $month, $day) {
+  public function getBirthDate() {
+    $day = $this->day;
+    $month = $this->month;
+    $year = $this->year;
 
     //Se $day e` un numero inferiore a 10
     //$day sara` preceduto da uno 0
@@ -45,8 +57,8 @@ Class User {
       $month = 0 . $month;
     }
 
-    $this->birth_date = $year . "-" . $month . "-" . $day;
-    return $this->birth_date;
+    $birth_date = $year . "-" . $month . "-" . $day;
+    return $birth_date;
   }
 
   //Method getUserData
