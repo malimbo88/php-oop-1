@@ -1,5 +1,6 @@
 <!-- User.php -->
 
+<!-- Class User -->
 <?php
 Class User {
   public $name;
@@ -36,8 +37,9 @@ Class User {
       return "allowed";
     }
   }
+  //End Method cunstruct
 
-  //Method birthDate
+  //Method getBirthDate
   //Arguments year of birth, month of birth, day of birth
   //Return a string that rapresent the date of birth
   public function getBirthDate() {
@@ -60,6 +62,7 @@ Class User {
     $birth_date = $year . "-" . $month . "-" . $day;
     return $birth_date;
   }
+  //End Method getBirthDate
 
   //Method getUserData
   //Return an array with all the user data
@@ -77,7 +80,8 @@ Class User {
       "authorized" => $this->authorized,
     ];
   }
+  //End Method getUserData
 
 };
-
  ?>
+<!-- End of Class User -->
